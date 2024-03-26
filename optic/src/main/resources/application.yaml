@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/2024/03/master.xml
+    url: jdbc:mysql://localhost:3307/OPTIC_CLINIC
+    user: root
+    password: root
+    contexts: default
+    database-change-log-lock-table: OPTIC_DATABASECHANGELOGLOCK
+    database-change-log-table: OPTIC_DATABASECHANGELOG
+  datasource:
+    url: jdbc:mysql://localhost:3307/OPTIC_CLINIC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        template-dialect: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+optic:
+  username: faruk
+  password: 123456789

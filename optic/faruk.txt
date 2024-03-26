@@ -1,0 +1,29 @@
+patient controller
+- add patient
+- update patient
+- get all patients (vidi da li treba biti paginacija)
+
+login controller
+- login (req param poslat username i password)
+
+visit contorller
+- add visit
+primjer body
+{
+    "mainProblem": "Your main problem value here",
+    "vod": "Your vod value here",
+    "vos": "Your vos value here",
+    "tod": "Your tod value here",
+    "tos": "Your tos value here",
+    "spaltod": "Your spaltod value here",
+    "spaltos": "Your spaltos value here",
+    "fod": "Your fod value here",
+    "fos": "Your fos value here",
+    "interventions": "Your interventions value here",
+    "diagnosis": "Your diagnosis value here",
+    "control": "Your control value here",
+    "therapy": "Your therapy value here",
+    "patientId": "402881768e7a62b0018e7a63026f0000"
+}
+- get visit by id
+- get all visits for patient

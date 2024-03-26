@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.patientsystem.DiagnosisController">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="219.0" style="-fx-background-color: #341d5c;" BorderPane.alignment="CENTER">
+         <GridPane layoutX="2.0" prefHeight="250.0" prefWidth="218.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Button id="patient" mnemonicParsing="false" onAction="#handleAddPatientButtonAction" prefHeight="66.0" prefWidth="218.0" style="-fx-background-color: #341d5c; -fx-background-radius: 0px;" styleClass="patient" text="Dodaj pacijenta" textFill="WHITE" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="20,00" wrappingWidth="17.0" />
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleFindPatientButtonAction" prefHeight="65.0" prefWidth="216.0" style="-fx-background-color: #341d5c; -fx-background-radius: 0px;" text="Pronađi pacijenta" textFill="WHITE" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20,00" wrappingWidth="17.0" />
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label prefHeight="66.0" prefWidth="220.0" style="-fx-alignment: center;" text="Meni" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button id="diagnosis" mnemonicParsing="false" onAction="#handleAddDiagnosisButtonAction" prefHeight="66.0" prefWidth="218.0" style="-fx-background-color: #341d5c; -fx-background-radius: 0px;" styleClass="diagnosis" text="Dodaj dijagnozu" textFill="WHITE" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="AMBULANCE" size="20,00" wrappingWidth="22.0" />
+               </graphic>
+            </Button>
+         </GridPane>
+         <AnchorPane layoutX="2.0" layoutY="696.0" prefHeight="90.0" prefWidth="219.0" AnchorPane.bottomAnchor="14.0">
+            <GridPane prefHeight="90.0" prefWidth="202.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <Button id="login-button" alignment="CENTER" mnemonicParsing="false" onAction="#handleSignOutButtonAction" prefHeight="90.0" prefWidth="223.0" style="-fx-background-color: #341d5c; -fx-background-radius: 0px;" styleClass="login-button" stylesheets="@button.css" text="Odjavi se" textAlignment="CENTER" textFill="WHITE">
+                  <cursor>
+                     <Cursor fx:constant="OPEN_HAND" />
+                  </cursor>
+                  <graphic>
+                     <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20,00" wrappingWidth="17.0" />
+                  </graphic>
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Button>
+            </GridPane>
+         </AnchorPane>
+      </AnchorPane>
+   </left>
+   <center>
+      <Pane prefHeight="800.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+         <TextField fx:id="nameField" layoutX="26.0" layoutY="74.0" prefHeight="30.0" prefWidth="235.0" promptText="Ime" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;">
+            <font>
+               <Font size="18.0" />
+            </font></TextField>
+         <TextField fx:id="lastNameField" layoutX="271.0" layoutY="74.0" prefHeight="30.0" prefWidth="235.0" promptText="Prezime" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;">
+            <font>
+               <Font size="18.0" />
+            </font></TextField>
+         <TextField fx:id="jmbgField" layoutX="524.0" layoutY="74.0" prefHeight="30.0" prefWidth="235.0" promptText="JMBG" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </TextField>
+         <Button alignment="CENTER" layoutX="608.0" layoutY="722.0" mnemonicParsing="false" onAction="#handleSignOutButtonAction" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #341d5c; -fx-background-radius: 0px;" text="Dodaj" textAlignment="CENTER" textFill="WHITE">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <font>
+               <Font size="18.0" />
+            </font>
+            <graphic>
+               <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="20,00" wrappingWidth="17.0" />
+            </graphic>
+         </Button>
+         <TextArea fx:id="diagnosisField" layoutX="26.0" layoutY="498.0" prefHeight="200.0" prefWidth="725.0" promptText="Dijagnoza" />
+         <Button layoutX="77.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleAddImageAction" prefHeight="32.0" prefWidth="133.0" style="-fx-background-color: #404040; -fx-background-radius: 0px;" text="Dodaj sliku" textFill="WHITE">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <graphic>
+               <FontAwesomeIconView fill="WHITE" glyphName="IMAGE" />
+            </graphic>
+         </Button>
+         <ImageView fitHeight="296.0" fitWidth="405.0" layoutX="297.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+      </Pane>
+   </center>
+</BorderPane>

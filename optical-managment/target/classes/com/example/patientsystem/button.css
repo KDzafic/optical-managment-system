@@ -1,0 +1,13 @@
+.login-button:hover{
+    /* -fx-transform: scale(1.1); Increase the size by 10% */
+    -fx-background-color: #fff; /* Change background color to white */
+    /* -fx-border-color: #404040; Change border color to #404040 */
+    /* -fx-color: #404040; Change text color to #404040 */
+ }
+
+button:hover{
+ /* -fx-transform: scale(1.1); Increase the size by 10% */
+    -fx-background-color: #fff; /* Change background color to white */
+ /* -fx-border-color: #404040; Change border color to #404040 */
+ /* -fx-color: #404040; Change text color to #404040 */
+}
